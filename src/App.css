@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Variables de fuentes*/
+:root{
+  --fuentetitulos : 'Roboto', sans-serif;
+  --fuentetextos : 'Open Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-color: #2D3748;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Estilos imagen y contenedor*/
+
+.img-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img-container img{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+/*Estilos developer info*/
+
+.developer-information{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.developer-information h1{
+  color: #EFEFEF;
+  font-family: var(--fuentetitulos);
+  font-weight: bolder;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+
+.developer-information p{
+  width: 450px;
+  text-align: center;
+  font-size: 17.5px;
+  color: #EFEFEF;
+  letter-spacing: 0.4px;
+  font-family: var(--fuentetextos);
+}
+
+/*Estilos Logos*/
+
+.contenedor-logos{
+  width: 100%;
+  height: 100px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 37px;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.contenedor-logos img{
+  width: 40px;
+  user-select: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/*Animacion Logo*/
+.contenedor-logos img:hover{
+  transform: scale(1.3);
+  transition: transform 0.2s linear;
+  transform : translateY(-6px);
+  cursor: pointer;
+  
+}
+
+/*Mobile*/
+@media screen and (max-width: 430px){
+  .developer-information h1{
+    color: #EFEFEF;
+    font-family: var(--fuentetitulos);
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: 1px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .developer-information p{
+    width: 80%;
+    text-align: center;
+    font-size: 17.5px;
+    color: #EFEFEF;
+    letter-spacing: 0.4px;
+    font-family: var(--fuentetextos);
   }
+  
+  .contenedor-logos img{
+    width: 28px;
+    user-select: none;
+  }
+
+  
 }
